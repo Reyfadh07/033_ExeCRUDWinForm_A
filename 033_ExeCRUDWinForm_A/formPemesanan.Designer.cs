@@ -32,47 +32,58 @@ namespace _033_ExeCRUDWinForm_A
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPemesanan));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtjeniskelamin = new System.Windows.Forms.TextBox();
+            this.txtnotelp = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtnama = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
+            this.cbkelas = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnkembali = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tivelDataSet = new _033_ExeCRUDWinForm_A.TivelDataSet();
+            this.tivel1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tivel1TableAdapter = new _033_ExeCRUDWinForm_A.TivelDataSetTableAdapters.Tivel1TableAdapter();
+            this.tivelDataSet1 = new _033_ExeCRUDWinForm_A.TivelDataSet1();
+            this.tiveltabelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tiveltabelTableAdapter = new _033_ExeCRUDWinForm_A.TivelDataSet1TableAdapters.TiveltabelTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tivelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tivel1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tivelDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiveltabelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.tiveltabelBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -97,38 +108,7 @@ namespace _033_ExeCRUDWinForm_A
             this.bindingNavigator1.Size = new System.Drawing.Size(800, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -138,6 +118,13 @@ namespace _033_ExeCRUDWinForm_A
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -166,6 +153,26 @@ namespace _033_ExeCRUDWinForm_A
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -184,91 +191,38 @@ namespace _033_ExeCRUDWinForm_A
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Location = new System.Drawing.Point(38, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(626, 315);
+            this.groupBox1.Size = new System.Drawing.Size(626, 329);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(213, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 32);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Form Pemesanan Tiket PO.Tivel";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(670, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 35);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Kembali";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(670, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 35);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Navy;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(670, 208);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 35);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(670, 140);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 35);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "ADD";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.44218F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.55782F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtjeniskelamin, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtnotelp, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtemail, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtnama, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtid, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbkelas, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 20);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -281,23 +235,57 @@ namespace _033_ExeCRUDWinForm_A
             this.tableLayoutPanel1.Size = new System.Drawing.Size(588, 275);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // txtjeniskelamin
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtjeniskelamin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nama";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.txtjeniskelamin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tiveltabelBindingSource, "jeniskelamin", true));
+            this.txtjeniskelamin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtjeniskelamin.Location = new System.Drawing.Point(182, 239);
+            this.txtjeniskelamin.Name = "txtjeniskelamin";
+            this.txtjeniskelamin.Size = new System.Drawing.Size(403, 29);
+            this.txtjeniskelamin.TabIndex = 33;
+            this.txtjeniskelamin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtnotelp
+            // 
+            this.txtnotelp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnotelp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tiveltabelBindingSource, "notelp", true));
+            this.txtnotelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnotelp.Location = new System.Drawing.Point(182, 143);
+            this.txtnotelp.Name = "txtnotelp";
+            this.txtnotelp.Size = new System.Drawing.Size(403, 29);
+            this.txtnotelp.TabIndex = 31;
+            this.txtnotelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtemail
+            // 
+            this.txtemail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtemail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tiveltabelBindingSource, "email", true));
+            this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemail.Location = new System.Drawing.Point(182, 98);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(403, 29);
+            this.txtemail.TabIndex = 30;
+            this.txtemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtnama
+            // 
+            this.txtnama.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnama.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tiveltabelBindingSource, "nama", true));
+            this.txtnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnama.Location = new System.Drawing.Point(182, 48);
+            this.txtnama.Name = "txtnama";
+            this.txtnama.Size = new System.Drawing.Size(403, 29);
+            this.txtnama.TabIndex = 29;
+            this.txtnama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -311,10 +299,28 @@ namespace _033_ExeCRUDWinForm_A
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 50);
+            this.label2.Size = new System.Drawing.Size(173, 50);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Jenis Kelamin";
+            this.label2.Text = "Nama";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 45);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -328,7 +334,7 @@ namespace _033_ExeCRUDWinForm_A
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 45);
+            this.label3.Size = new System.Drawing.Size(173, 45);
             this.label3.TabIndex = 24;
             this.label3.Text = "E-Mail";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,7 +351,7 @@ namespace _033_ExeCRUDWinForm_A
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 47);
+            this.label4.Size = new System.Drawing.Size(173, 47);
             this.label4.TabIndex = 25;
             this.label4.Text = "No Telp/WA";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,7 +368,7 @@ namespace _033_ExeCRUDWinForm_A
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 49);
+            this.label5.Size = new System.Drawing.Size(173, 49);
             this.label5.TabIndex = 26;
             this.label5.Text = "Kelas Armada";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -379,10 +385,93 @@ namespace _033_ExeCRUDWinForm_A
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 236);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 39);
+            this.label6.Size = new System.Drawing.Size(173, 39);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Catatan";
+            this.label6.Text = "Jenis Kelamin";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtid
+            // 
+            this.txtid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tiveltabelBindingSource, "id", true));
+            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.Location = new System.Drawing.Point(182, 3);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(403, 29);
+            this.txtid.TabIndex = 28;
+            this.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbkelas
+            // 
+            this.cbkelas.FormattingEnabled = true;
+            this.cbkelas.Location = new System.Drawing.Point(182, 190);
+            this.cbkelas.Name = "cbkelas";
+            this.cbkelas.Size = new System.Drawing.Size(155, 21);
+            this.cbkelas.TabIndex = 34;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(213, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(323, 32);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Form Pemesanan Tiket PO.Tivel";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnkembali
+            // 
+            this.btnkembali.BackColor = System.Drawing.Color.Navy;
+            this.btnkembali.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnkembali.ForeColor = System.Drawing.Color.White;
+            this.btnkembali.Location = new System.Drawing.Point(670, 338);
+            this.btnkembali.Name = "btnkembali";
+            this.btnkembali.Size = new System.Drawing.Size(121, 35);
+            this.btnkembali.TabIndex = 19;
+            this.btnkembali.Text = "Kembali";
+            this.btnkembali.UseVisualStyleBackColor = false;
+            this.btnkembali.Click += new System.EventHandler(this.btnkembali_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btndelete.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.ForeColor = System.Drawing.Color.White;
+            this.btndelete.Location = new System.Drawing.Point(670, 273);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(121, 35);
+            this.btndelete.TabIndex = 20;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btnsave
+            // 
+            this.btnsave.BackColor = System.Drawing.Color.Navy;
+            this.btnsave.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.ForeColor = System.Drawing.Color.White;
+            this.btnsave.Location = new System.Drawing.Point(670, 208);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(121, 35);
+            this.btnsave.TabIndex = 21;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnadd.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.ForeColor = System.Drawing.Color.White;
+            this.btnadd.Location = new System.Drawing.Point(670, 140);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(121, 35);
+            this.btnadd.TabIndex = 22;
+            this.btnadd.Text = "ADD";
+            this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // pictureBox1
             // 
@@ -394,73 +483,33 @@ namespace _033_ExeCRUDWinForm_A
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // tivelDataSet
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(181, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(404, 29);
-            this.textBox2.TabIndex = 28;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tivelDataSet.DataSetName = "TivelDataSet";
+            this.tivelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox3
+            // tivel1BindingSource
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(181, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(404, 29);
-            this.textBox3.TabIndex = 29;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tivel1BindingSource.DataMember = "Tivel1";
+            this.tivel1BindingSource.DataSource = this.tivelDataSet;
             // 
-            // textBox4
+            // tivel1TableAdapter
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(181, 98);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(404, 29);
-            this.textBox4.TabIndex = 30;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tivel1TableAdapter.ClearBeforeFill = true;
             // 
-            // textBox5
+            // tivelDataSet1
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(181, 143);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(404, 29);
-            this.textBox5.TabIndex = 31;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tivelDataSet1.DataSetName = "TivelDataSet1";
+            this.tivelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox7
+            // tiveltabelBindingSource
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(181, 239);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(404, 29);
-            this.textBox7.TabIndex = 33;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tiveltabelBindingSource.DataMember = "Tiveltabel";
+            this.tiveltabelBindingSource.DataSource = this.tivelDataSet1;
             // 
-            // comboBox1
+            // tiveltabelTableAdapter
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(181, 190);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 34;
+            this.tiveltabelTableAdapter.ClearBeforeFill = true;
             // 
             // formPemesanan
             // 
@@ -469,10 +518,10 @@ namespace _033_ExeCRUDWinForm_A
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnadd);
+            this.Controls.Add(this.btnsave);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnkembali);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bindingNavigator1);
@@ -486,6 +535,10 @@ namespace _033_ExeCRUDWinForm_A
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tivelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tivel1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tivelDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiveltabelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,23 +560,29 @@ namespace _033_ExeCRUDWinForm_A
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnkembali;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtjeniskelamin;
+        private System.Windows.Forms.TextBox txtnotelp;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtnama;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.ComboBox cbkelas;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private TivelDataSet tivelDataSet;
+        private System.Windows.Forms.BindingSource tivel1BindingSource;
+        private TivelDataSetTableAdapters.Tivel1TableAdapter tivel1TableAdapter;
+        private TivelDataSet1 tivelDataSet1;
+        private System.Windows.Forms.BindingSource tiveltabelBindingSource;
+        private TivelDataSet1TableAdapters.TiveltabelTableAdapter tiveltabelTableAdapter;
     }
 }
